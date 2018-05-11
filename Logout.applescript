@@ -53,3 +53,13 @@ inputByName("password", 0, pass)
 clickName("btnSubmit", 0)
 delay 1
 clickName("btnSubmit", 0)
+
+-- Close the tab
+
+tell application "Safari"
+    repeat with t in tabs of windows
+        tell t
+            if name starts with "TabName" then close
+        end tell
+    end repeat
+end tell
