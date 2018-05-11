@@ -59,7 +59,7 @@ clickName("btnSubmit", 0)
 tell application "Safari"
     repeat with t in tabs of windows
         tell t
-            if name starts with "TabName" then close
+            if name starts with "DA-IICT" then close
         end tell
     end repeat
 end tell
