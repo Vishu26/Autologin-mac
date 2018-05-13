@@ -27,7 +27,11 @@ set pass to item 2 of paragraph_list
 repeat
 	tell application "Safari"
 		if not (exists document 1) then reopen
-		tell current tab of window 1 to set URL to "https://10.100.56.55:8090"
+		tell window 1
+			set current tab to (make new tab with properties {URL:"https://10.100.56.55:8090"})
+		end tell
+		
+		-- tell current tab of window 1 to set URL to "https://10.100.56.55:8090"
 		
 		set the_state to missing value
 		repeat until the_state is "complete"
