@@ -7,3 +7,4 @@ The file should look like -
 abcdefg
 ```
 2. Run AutoLog.app application. It will autolog into cyberoam every 1:30 hr.
+3. To logout and quit AutoLog.app, run Logout.app.
